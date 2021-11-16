@@ -3,7 +3,7 @@ var pos = 0;
 //pageWidth is the width of the webpage. This is later used to calculate when Pac-Man needs to turn around. 
 let pageWidth = window.innerWidth;
 //This array contains all the PacMan movement images
-const pacArray = 
+const pacArr = 
 [
   ['./images/PacMan1.png', './images/PacMan2.png'],
   ['./images/PacMan3.png', './images/PacMan4.png'],
@@ -24,7 +24,7 @@ function Run()
   let imgWidth = img.width;
   focus = (focus + 1) % 2;
   direction = checkPageBounds(direction, imgWidth, pos, pageWidth);
-  img.src = pacArray[direction][focus];
+  img.src = pacArr[direction][focus];
   if (direction) {
     pos -= 20;
     img.style.left = pos + 'px';
